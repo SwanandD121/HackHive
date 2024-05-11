@@ -9,9 +9,9 @@ import image12 from "../../assets/image 12.png";
 
 export default function Organizations() {
   return (
-    <div className="organizations">
+    <div className="organizations dark:text-white">
       <p>Trusted by worlds leading organization</p>
-      <div className="orgs">
+      <div className="orgs dark:border-white dark:bg-neutral-200">
         <a href="">
           <img src={image7} alt="" />
         </a>

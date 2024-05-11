@@ -4,8 +4,10 @@ import Landing from "./Pages/Landing";
 import Hackathons from "./Pages/Hackathons";
 
 function App() {
+  
   return (
     <>
+    <div className="dark:bg-neutral-900">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -13,6 +15,7 @@ function App() {
           <Route path="/hackathons" element={<Hackathons />} />
         </Routes>
       </BrowserRouter>
+    </div>
     </>
   );
 }

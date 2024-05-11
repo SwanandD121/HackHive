@@ -3,7 +3,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const LoginCard = () => {
   return (
-    <div className="w-[500px] rounded-2xl absolute top-[20vh] left-[10vw] p-0 border-[#1e78ff3e border-[1px]">
+    <div className="dark:text-white w-[500px] rounded-2xl absolute top-[20vh] left-[10vw] p-0 border-[#1e78ff3e border-[1px]">
       <div className="bg-[#1e78ff3e] text-[48px] font-semibold text-center rounded-t-2xl">
         Login
       </div>
@@ -18,7 +18,7 @@ const LoginCard = () => {
         </div>
       </div>
       <div className="relative">
-        <p className="text-center z-10 bg-white w-fit m-auto text-[14px]">OR</p>
+        <p className="text-center z-10 bg-white text-black w-fit m-auto text-[14px]">OR</p>
         <hr className="absolute left-0 w-[430px] top-[12px] z-0" />
       </div>
       <div>

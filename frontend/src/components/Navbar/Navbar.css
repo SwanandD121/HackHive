@@ -1,5 +1,7 @@
 *{
     font-family: "Nunito Sans";
+    color: var(--text);
+    background-color: var(--bg-clr);
 }
 .navbar {
     display: flex;
@@ -51,6 +53,6 @@
 .navbar-buttons button:nth-child(2) {
     border: 1px solid #0052CE;
     background: #1E78FF;
-    color: white;
+    color: var(--text);
 
 }
