@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>
-    <div className="dark:bg-neutral-900">
+    <div className="dark:bg-gradient-to-br from-neutral-900 from-10% to-90% to-slate-900 mt-0">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />

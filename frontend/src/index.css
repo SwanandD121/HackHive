@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    top: 0;
-    margin: 0px;
-    padding: 0px;
-}
 
 .dark-theme{
     --text: #fff;

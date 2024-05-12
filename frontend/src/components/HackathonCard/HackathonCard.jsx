@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import placeholderImage from "../../assets/logo.svg";
+import placeholderImage from "../../assets/logoforlight.svg";
 
 export default function HackathonCard() {
   const [hackathons, setHackathons] = useState([]);

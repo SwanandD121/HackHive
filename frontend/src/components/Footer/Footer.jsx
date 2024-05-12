@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
-import logo from "../../assets/logo.svg";
-import copyright from "../../assets/copyright_icon.svg";
+import logoforlight from "../../assets/logoforlight.svg";
+import logofordark from "../../assets/logofordark.svg";
+import logodarkpng from "../../assets/logodarkpng.png"
 import insta from "../../assets/instagram_icon.svg";
 import linkedin from "../../assets/linkedin_icon.svg";
 import whatsapp from "../../assets/whatsapp_icon.svg";
@@ -9,12 +10,33 @@ import facebook from "../../assets/facebook_icon.svg";
 import twitter from "../../assets/twitter_icon.svg";
 
 export default function Footer() {
+
+  // FOR DARK MODE
+  const [theme, setTheme] = useState(null);
+
+  // useEffect(() => {
+  //   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //     setTheme('dark'); // Set to 'dark' if preferred color scheme is dark
+  //   } else {
+  //     setTheme('light'); // Set to 'light' if preferred color scheme is light or not specified
+  //   }
+  // }, [])
+
+  useEffect(() =>{
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme])
+  // FOR DARK MODE
+
   return (
     <div className="flex flex-wrap justify-between h-1/4 pt-8 bg-blue-400 dark:bg-slate-800 bg-opacity-20">
       <div className="left relative left-16 mb-20 flex flex-col space-y-4">
         <div className="">
-          <a href="">
-            <img src={logo} alt="" />
+          <a href="/">
+            <img src={theme === "dark" ? logodarkpng : logoforlight} alt="" />
           </a>
         <div className="flex items-center mt-4">
         <span className="text-gray-600 dark:text-white/50">© copyright 2024, HackHive</span>

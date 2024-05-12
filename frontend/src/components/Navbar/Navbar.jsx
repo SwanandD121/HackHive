@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logoforlight from "../../assets/logo.svg";
-import logofordark from "../../assets/logo.svg";
+import logoforlight from "../../assets/logoforlight.svg";
+import logofordark from "../../assets/logofordark.svg";
+import logodarkpng from "../../assets/logodarkpng.png"
 import { useNavigate } from "react-router-dom";
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
+
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -37,7 +41,7 @@ export default function Navbar() {
     <div className="navbar dark:text-white">
       <div className="logo">
         <a href="/">
-          <img src={theme === "dark" ? logofordark : logoforlight} alt="" />
+          <img src={theme === "dark" ? logodarkpng : logoforlight} alt="" />
         </a>
       </div>
       <div className="navbar-options">
@@ -51,14 +55,13 @@ export default function Navbar() {
           <a href="">Blog</a>
         </li>
       </div>
-      <div className="navbar-buttons">
-        {/* <button onClick={() => toggleDark()}>Dark</button> */}
+      <div className="navbar-buttons flex items-center justify-center">
 
         {/* FOR DARK MODE */}
-            <label class="switch" onChange={handleThemeSwitch}>
+            {/* <label class="switch" onChange={handleThemeSwitch}>
               <input type="checkbox"/>
               <span class="slider"></span>
-            </label>
+            </label> */}
         {/* FOR DARK MODE */}
 
         <button>Host</button>
@@ -68,6 +71,7 @@ export default function Navbar() {
           }}>
           Log In
         </button>
+        <div  onClick={handleThemeSwitch} className="text-3xl border rounded-full border-lg border-black dark:border dark:border-lg dark:rounded-full dark:border-blue-500 p-1 cursor-pointer hover:scale-110 transition-all dark:text-yellow-400 text-center m-4">{theme === "dark" ? <MdLightMode /> : <MdDarkMode />}</div>
       </div>
     </div>
   );
