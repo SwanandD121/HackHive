@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logoforlight from "../../assets/logoforlight.svg";
-import logofordark from "../../assets/logofordark.svg";
 import logodarkpng from "../../assets/logodarkpng.png"
 import { useNavigate } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";

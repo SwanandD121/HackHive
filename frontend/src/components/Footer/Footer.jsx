@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Footer.css";
 import logoforlight from "../../assets/logoforlight.svg";
-import logofordark from "../../assets/logofordark.svg";
 import logodarkpng from "../../assets/logodarkpng.png"
 import insta from "../../assets/instagram_icon.svg";
 import linkedin from "../../assets/linkedin_icon.svg";
